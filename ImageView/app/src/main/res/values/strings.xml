@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Image View</string>
+    <string name="version_name">v1.0</string>
+    <string name="take_selfie">Take Selfie</string>
+    <string name="upload_from_gallery">Upload from gallery</string>
+    <string name="please_select_take_image">Selected / Taken Image will preview here</string>
+    <string name="title_permission_alert">Permission Needed</string>
+    <string name="open_settings">OPEN SETTINGS</string>
+    <string name="cancel">CANCEL</string>
+</resources>

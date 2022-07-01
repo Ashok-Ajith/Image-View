@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/lyt_imgContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/DP400"
+        android:minWidth="@dimen/DP350"
+        android:layout_marginHorizontal="@dimen/DP10"
+        app:shimmer_auto_start="false"
+        android:background="@color/cardview_light_background"
+        android:elevation="@dimen/DP5"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_duration="1200">
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/DP10"
+        android:layout_marginBottom="@dimen/DP150"
+        android:layout_marginHorizontal="@dimen/DP10"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/lyt_imgContainer"
+        app:layout_constraintTop_toTopOf="@+id/lyt_imgContainer">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/DP400"
+            android:scaleType="fitXY"
+            android:minWidth="@dimen/DP350"/>
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_emptyImageHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/DP10"
+        android:gravity="center_horizontal"
+        android:text="Taken image will be previewed here"
+        app:layout_constraintBottom_toBottomOf="@+id/lyt_imgContainer"
+        app:layout_constraintTop_toTopOf="@+id/lyt_imgContainer"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_filePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/DP5"
+        android:gravity="center"
+        android:padding="@dimen/DP5"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/DP20"
+        android:layout_marginVertical="@dimen/DP20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take picture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
